@@ -1,5 +1,5 @@
-# This script is designed to be stored and run from an ASI IT Assistant Technician's portable USB drive or local device. 
-# It will autoamtically extract monitor information in a .csv file for easy upload into the Asset Panda inventory management software.
+# This script is designed to be stored and run from a technician's portable USB drive or local device. 
+# It will autoamtically extract monitor information in a .csv file for easy upload into an inventory management software.
 # Some of the original script has been modified to protect organizational privacy and security.
  
 # Save the current operating directory
@@ -141,6 +141,7 @@ ForEach ($Monitor in $Monitors) {
 }
 
 $Monitor_Array | Export-Csv -Path "$($opdir)\Monitors.csv" -Append -NoTypeInformation #Export the monitor information into a .csv file.
+
 
 
 # https://github.com/MaxAnderson95/Get-Monitor-Information/blob/master/Get-Monitor.ps1
